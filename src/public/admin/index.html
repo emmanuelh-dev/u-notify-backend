@@ -193,14 +193,14 @@
         function displayEvents(events) {
             const eventsListDiv = document.getElementById('eventsList');
             eventsListDiv.innerHTML = '';
-
+            console.log(events[0].image)
             events.forEach(event => {
                 const eventCard = document.createElement('div');
                 eventCard.className = 'bg-white rounded-lg shadow-md overflow-hidden';
                 eventCard.innerHTML = `
                     <div class="relative pb-2/3">
                         ${event.image ? 
-                            `<img src="${event.image}" class="absolute h-full w-full object-cover" alt="${event.title}">` : 
+                            `<img src="${event.image}" class="h-full w-full object-cover" alt="${event.title}">` : 
                             '<div class="absolute h-full w-full bg-gray-200 flex items-center justify-center text-gray-500">Sin imagen</div>'
                         }
                     </div>
