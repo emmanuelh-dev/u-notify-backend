@@ -28,9 +28,14 @@ async function login() {
     }
 }
 async function register() {
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const name = 'Generic User';
+    const email = document.getElementById('email-register').value;
+    const password = document.getElementById('password-register').value;
+    const name = document.getElementById('name-register').value;
+
+    if (!email || !password || !name) {
+        alert('All fields are required');
+        return;
+    }
 
     try {
         const response = await fetch(`${API_URL}/api/auth/register`, {

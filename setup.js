@@ -47,7 +47,7 @@ async function setupProject() {
   console.log('\n🎉 Setup completed successfully!');
   console.log('\n📋 Next steps:');
   console.log('1. Start the server: npm run dev');
-  console.log('2. Visit: http://localhost:3000/admin');
+  console.log('2. Visit: http://localhost:3666/admin');
   console.log('3. Log in with the admin credentials above');
 }
 
